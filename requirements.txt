@@ -39,7 +39,7 @@ pyLDAvis==3.4.1
 pyparsing==3.2.3
 python-dateutil==2.9.0.post0
 pytz==2025.2
-pywin32==310
+pywin32==310; platform_system == "Windows"
 pyzmq==26.4.0
 regex==2024.11.6
 scikit-learn==1.6.1
