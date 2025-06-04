@@ -1,11 +1,26 @@
 name: CI
 on: [push, pull_request]
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Install dep
-        run: pip install -r requirements.txt
-      - name: Run tests
-        run: python --version
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies (except ta-lib)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Install TA-Lib
+        run: |
+          $url = "https://github.com/cgohlke/talib-build/releases/download/v0.6.3/ta_lib-0.6.3-cp312-cp312-win_amd64.whl"
+          $output = "ta_lib-0.6.3-cp312-cp312-win_amd64.whl"  # Keep original filename
+          Invoke-WebRequest -Uri $url -OutFile $output
+          pip install $output
