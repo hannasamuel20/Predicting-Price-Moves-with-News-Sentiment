@@ -15,7 +15,6 @@ executing==2.2.0
 fonttools==4.58.1
 frozendict==2.4.6
 funcy==2.0
-gensim==4.3.3
 idna==3.10
 ipykernel==6.29.5
 ipython==9.3.0
