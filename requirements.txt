@@ -66,7 +66,7 @@ six==1.17.0
 smart-open==7.1.0
 soupsieve==2.7
 stack-data==0.6.3
-ta-lib @ ta_lib-0.6.3-cp312-cp312-win_amd64.whl#sha256=fbf480e9e936ed983776c616f461f4d4511bb1d010424558db3f559aec10dcd4
+ta-lib @ file://./libs/ta_lib-0.6.3-cp312-cp312-win_amd64.whl#sha256=fbf480e9e936ed983776c616f461f4d4511bb1d010424558db3f559aec10dcd4
 textblob==0.19.0
 threadpoolctl==3.6.0
 tornado==6.5.1
